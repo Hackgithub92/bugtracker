@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to Jeff's Bug Tracker Application!</h1>
+        <p>This application allows for bugs to be created and tracked.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container">
+    
+    <div class="row">
+       <% @bugs.each do |bug| %>
+       <div class="col-md-4">
+           <h2><%= bug.title%></h2>
+           <p><%=bug.description.truncate_words(30)%></p>
+           <p>
+               <%= link_to 'Read more >', bug, class: "btn btn-default"%>
+           </p>
+       </div>
+       <% end %>
+    </div>
+</div>
+    
+    
+    <hr>
+    
+    
+    <footer>
+        <p>&copy; 2018 Company, Inc.</p>
+    </footer>
+</div>

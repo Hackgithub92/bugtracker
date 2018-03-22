@@ -1,24 +1,31 @@
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fname:</strong>
-  <%= @user.fname %>
-</p>
+<h1>User Information</h1>
 
-<p>
-  <strong>Lname:</strong>
-  <%= @user.lname %>
-</p>
+<ul class="list-group">
+  <li class="list-group-item">First Name:
+    <%= @user.fname %>
+  </li>
+  
+  <li class="list-group-item">Last Name:
+    <%= @user.lname %>
+  </li>
+  
+  <li class="list-group-item">Email:
+    <%= @user.email %>
+  </li>
+  
+  <li class="list-group-item">Thumbnail:
+    <%= @user.thumbnail %>
+  </li>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+</ul>
 
-<p>
-  <strong>Thumbnail:</strong>
-  <%= @user.thumbnail %>
-</p>
+<%= link_to edit_user_path(@user), class: "btn btn-default btn-sm" do %>Edit
+<% end %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to users_path, class: "btn btn-default btn-sm" do %>Back
+<% end%>
+
+ 
